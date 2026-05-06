@@ -53,5 +53,21 @@ def metrics():
     MEMORY_USAGE.set(psutil.virtual_memory().percent)
     return Response(generate_latest(), mimetype='text/plain')
 
+@app.route('/')
+def home():
+    start = time.time()
+    REQUEST_COUNT.labels(endpoint='/').inc()
+    
+    response = "API funcionando"
+    
+    REQUEST_LATENCY.labels(endpoint='/').observe(time.time() - start)
+    return response
+
+@app.route('/api/datos')
+def datos():
+    with REQUEST_LATENCY.labels(endpoint='/api/datos').time():
+        REQUEST_COUNT.labels(endpoint='/api/datos').inc()
+        return {"valor": random.randint(1, 100)}
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
