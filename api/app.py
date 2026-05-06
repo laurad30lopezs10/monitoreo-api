@@ -68,6 +68,17 @@ def datos():
     with REQUEST_LATENCY.labels(endpoint='/api/datos').time():
         REQUEST_COUNT.labels(endpoint='/api/datos').inc()
         return {"valor": random.randint(1, 100)}
+    
+# En la raíz, para que no dé "Empty query result"
+@app.route('/')
+def home():
+    # El bloque 'with' asegura que se registre sum y count automáticamente
+    with REQUEST_LATENCY.labels(endpoint='/').time():
+        REQUEST_COUNT.labels(endpoint='/').inc()
+        return "API funcionando"
 
+# En el bloque principal, fuerza la existencia de las métricas al iniciar
 if __name__ == '__main__':
+    # Esto inicializa las métricas en 0 para que Prometheus las vea desde el segundo 1
+    REQUEST_LATENCY.labels(endpoint='/').observe(0)
     app.run(host='0.0.0.0', port=3000)
