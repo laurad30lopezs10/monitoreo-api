@@ -1,9 +1,8 @@
-# monitoreo-api
 # Monitoreo de API con Prometheus y Grafana
 
 ## Información del estudiante
 
-**Nombre:** Laura Daniela Lopez Santos.
+**Nombre:** Laura Daniela Lopez Santos
 
 **Codigo:** 202220007601 
 
@@ -11,7 +10,7 @@
 
 **Link video:** 
 
-**Materia:** Desarrollo de aplicaciones en la nube  
+**Materia:** Desarrollo de aplicaciones en la nube 
 
 **Actividad:** BONUS - Monitoreo y observabilidad en la nube
 
@@ -269,19 +268,19 @@ A continuación se muestran las evidencias del desarrollo e implementación del 
 
 En esta imagen se muestra la creación del repositorio en GitHub donde se almacenó todo el proyecto.
 
-![Crear repositorio](docs/Crear_repositorio.png)
+![Crear repositorio](Imagenes_readme/Crear_repositorio.png)
 
 # Paso 2 - Clonación del repositorio
 
 Aquí se observa el proceso de clonar el repositorio desde GitHub al entorno local para iniciar el desarrollo.
 
-![Clonar repositorio](docs/Clonar_repositorio.png)
+![Clonar repositorio](Imagenes_readme/Clonar_repositorio.png)
 
 # Paso 3 - Estructura del proyecto
 
 La siguiente imagen muestra la organización de carpetas y archivos utilizados para el proyecto, incluyendo la API, configuración de Prometheus y scripts.
 
-![Estructura](docs/Estructura_proyecto.png)
+![Estructura](Imagenes_readme/Estructura_proyecto.png)
 
 # Paso 4 - Configuración de la API
 
@@ -289,19 +288,19 @@ En esta etapa se realizó la configuración de la API REST y la instrumentación
 
 La API cuenta con distintos endpoints y expone métricas mediante `/metrics`.
 
-![Archivos API](docs/Archivos_api.png)
+![Archivos API](Imagenes_readme/Archivos_api.png)
 
 # Paso 5 - Configuración de Prometheus
 
 Aquí se muestra la configuración realizada en el archivo `prometheus.yml`, donde se define el scraping automático de métricas desde la API.
 
-![Configuración Prometheus](docs/Configuracion_prometheus.png)
+![Configuración Prometheus](Imagenes_readme/Configuracion_prometheus.png)
 
 # Paso 6 - Configuración de Grafana
 
 En esta imagen se observa la configuración inicial de Grafana y la conexión con Prometheus como fuente de datos.
 
-![Configuración Grafana](docs/Configuracion_grafana.png)
+![Configuración Grafana](Imagenes_readme/Configuracion_grafana.png)
 
 # Paso 7 - Ejecución de Docker Compose
 
@@ -313,13 +312,13 @@ Servicios ejecutados:
 - Prometheus
 - Grafana
 
-![Docker Compose](docs/Correr_docker_compose.png)
+![Docker Compose](Imagenes_readme/Correr_docker_compose.png)
 
 # Paso 8 - Verificación de versiones y servicios
 
 En esta etapa se verificó que Docker, Docker Compose y los servicios estuvieran funcionando correctamente.
 
-![Comprobar versiones](docs/Comprobar_versiones.png)
+![Comprobar versiones](Imagenes_readme/Comprobar_versiones.png)
 
 # Paso 9 - Pruebas de funcionamiento de la API
 
@@ -331,7 +330,7 @@ Endpoints probados:
 - `/api/datos`
 - `/api/lento`
 
-![Funcionamiento API](docs/Probar_funcionamiento_api.png)
+![Funcionamiento API](Imagenes_readme/Probar_funcionamiento_api.png)
 
 # Paso 10 - Verificación de métricas
 
@@ -344,7 +343,7 @@ Estas métricas incluyen:
 - Requests activos
 - Métricas del sistema
 
-![Métricas](docs/Probar_funcionamiento_metrics.png)
+![Métricas](Imagenes_readme/Probar_funcionamiento_metrics.png)
 
 # Paso 11 - Configuración de Prometheus en Grafana
 
@@ -352,19 +351,19 @@ Aquí se muestra la integración de Prometheus como fuente de datos dentro de Gr
 
 Esto permite construir dashboards con métricas en tiempo real.
 
-![Prometheus en Grafana](docs/Prometheus_en_grafana.png)
+![Prometheus en Grafana](Imagenes_readme/Prometheus_en_grafana.png)
 
 # Paso 12 - Configuración de scripts y automatización
 
 En esta etapa se desarrollaron scripts para generar tráfico sintético y automatizar pruebas sobre la API.
 
-![Scripts](docs/Archivos_scripts.png)
+![Scripts](Imagenes_readme/Archivos_scripts.png)
 
 # Paso 13 - Configuración adicional de Prometheus
 
 La siguiente evidencia muestra archivos complementarios utilizados para mejorar la configuración del monitoreo.
 
-![Archivos Prometheus](docs/Archivos_prometheus.png)
+![Archivos Prometheus](Imagenes_readme/Archivos_prometheus.png)
 
 # Resultado final
 
