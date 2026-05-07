@@ -257,7 +257,7 @@ Por medio de los siguientes links se puede acceder a todos los servicios
 
 ```bash
 Usuario: admin
-Contraseña: admin
+Contraseña: Aa123456
 ```
 
 # Evidencias del proyecto
