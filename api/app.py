@@ -24,8 +24,10 @@ def after(response):
 
 @app.route('/')
 def home():
-    REQUEST_COUNT.labels(endpoint='/').inc()
-    return "API funcionando"
+    # El bloque 'with' asegura que se registre sum y count automáticamente
+    with REQUEST_LATENCY.labels(endpoint='/').time():
+        REQUEST_COUNT.labels(endpoint='/').inc()
+        return "API funcionando"
 
 @app.route('/api/datos')
 def datos():
@@ -54,4 +56,5 @@ def metrics():
     return Response(generate_latest(), mimetype='text/plain')
 
 if __name__ == '__main__':
+    REQUEST_LATENCY.labels(endpoint='/').observe(0)
     app.run(host='0.0.0.0', port=3000)
