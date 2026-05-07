@@ -3,11 +3,16 @@
 
 ## Información del estudiante
 
-**Nombre:** Laura Daniela Lopez Santos
+**Nombre:** Laura Daniela Lopez Santos.
+
 **Codigo:** 202220007601 
+
 **Repositorio:** https://github.com/laurad30lopezs10/monitoreo-api 
+
 **Link video:** 
+
 **Materia:** Desarrollo de aplicaciones en la nube  
+
 **Actividad:** BONUS - Monitoreo y observabilidad en la nube
 
 # Índice
